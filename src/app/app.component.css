@@ -1,0 +1,110 @@
+.page{
+    width: var(--page-width);
+    height: var(--page-height);
+    min-height: var(--page-height);
+    padding: var(--page-padding);
+    font-family: var(--font-family);
+    position: relative;
+}
+
+.headSection{
+    display: flex;
+}
+
+.headerBanner{
+    width: 75%;
+}
+
+.info{
+    background-color: black;
+    width: 25%;
+    padding: var(--page-padding);
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoItem{
+    color: white;
+    font-weight: bold;
+    text-align: right;
+    display: inherit;
+    justify-content: space-between;
+}
+
+.infoItem > img{
+    width: 38px;
+    height: 38px;
+}
+.infoItem > div {
+    display: flex;
+    flex-direction: column;
+}
+.infoItem > div > span{
+    text-transform: uppercase;
+    font-size: var(--font-size-normal);
+}
+
+.bodySection{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product{
+    width: 25%;
+    position: relative;
+}
+.product > img{
+    width: -webkit-fill-available;
+    padding-bottom: 30px;
+    -webkit-filter: drop-shadow(var(--product-shadow));
+    filter: drop-shadow(var(--product-shadow));
+}
+.price{
+    position: absolute;
+    font-family: var(--product-price-font-family);
+    font-size: var(--product-price-font-size);
+    color: var(--product-price-color);
+    left: 0;
+    bottom: 40px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--product-price-outline-color);
+    text-shadow: var(--product-shadow);
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    font-weight: bold;
+    bottom: 0;
+    left: 75px;
+}
+.footerBanner{
+    width: var(--page-width);
+    height: var(--footer-banner-height);
+    position: absolute;
+    bottom: 5mm;
+}
+
+/* Variables */
+::ng-deep :root {
+    /*Page Size*/
+    --page-width:210mm;
+    --page-height:297mm;
+    --page-padding:5mm;
+
+    /*Font setup*/
+    --font-size-normal: 12pt;
+    --font-family: Helvetica;
+
+    /*Banner*/
+    --footer-banner-height:60mm;
+
+    /*Product Stuff*/
+    --product-shadow: 2px 2px 4px #000;
+    --product-price-font-size: 66px;
+    --product-price-font-family: Impact;
+    --product-price-color: red;
+    --product-price-outline-color: white;
+}

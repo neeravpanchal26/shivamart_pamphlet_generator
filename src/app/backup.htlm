@@ -1,0 +1,31 @@
+<div class="page">
+  <div class="headSection">
+    <img class="headerBanner" src="/assets/logo.jpg" />
+    <div class="info">
+      <div class="infoItem" *ngFor="let item of info">
+        <img src="{{ item.iconPath }}" />
+        <div>
+          <span>{{ item.titletext }}</span>
+          <span>{{ item.text }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bodySection">
+    <div class="product" *ngFor="let item of products">
+      <img src="{{ item.image }}" />
+      <span class="price">
+        {{ item.price }}
+        <sup>{{ item.cents }}</sup>
+      </span>
+      <div class="desc">
+        <span>{{ item.brand }}</span>
+        <span>{{ item.desc }}</span>
+        <span>{{ item.size }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="footerSection">
+    <img class="footerBanner" src="/assets/footer.png" />
+  </div>
+</div>
